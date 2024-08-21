@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prank Bank Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .account {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fake Bank Account Balances</h1>
+    <div class="account" id="checking-account">
+        <h2>Checking Account</h2>
+        <p>Balance: $<span id="checking-balance"></span></p>
+    </div>
+    <div class="account" id="savings-account">
+        <h2>Savings Account</h2>
+        <p>Balance: $<span id="savings-balance"></span></p>
+    </div>
+
+    <script>
+        function generateFakeBalance() {
+            return (Math.random() * 5000).toFixed(2);
+        }
+
+        document.getElementById('checking-balance').textContent = generateFakeBalance();
+        document.getElementById('savings-balance').textContent = generateFakeBalance();
+    </script>
+</body>
+</html>
+
